@@ -1,0 +1,60 @@
+---
+const milestones = [
+  { year: '1999', text: 'Network Engineer II at RDA Group — started building before Y2K.' },
+  { year: '2003', text: 'Database / dev / network roles at J. Walter Thompson and zipForm.' },
+  { year: '2009', text: 'Senior Software Engineer at Oakland County government and Valassis.' },
+  { year: '2012', text: '.NET Practice Lead at Pillar Technology — consulting at scale.' },
+  { year: '2015', text: 'CTO at Wantify, then Director at RightBrain Networks (AWS / cloud-native).' },
+  { year: '2016', text: 'Founded TeamVirtuoso — independent consulting.' },
+  { year: '~2018', text: 'Spent a lot of time building in the blockchain era.' },
+  { year: '2018', text: 'Engineering Manager at AHEAD — enterprise platforms.' },
+  { year: '2021', text: 'CTO at CODE Éxitos — digital product studio for entrepreneurs.' },
+  { year: 'Today', text: 'Full-time work plus independent consulting. Shipping AI-native software.' },
+];
+---
+
+<section id="about" class="section-rule">
+  <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="reveal lg:col-span-5">
+        <p class="label mb-4 text-accent">03 — About</p>
+        <h2 class="display text-4xl text-ink md:text-6xl">
+          25+ years.<br />
+          <em>Still building.</em>
+        </h2>
+        <div class="mt-8 space-y-5 text-lg leading-relaxed text-ink-soft">
+          <p>
+            I started in network engineering and database administration in the late
+            '90s. I shipped my first production applications before broadband was
+            common. Since then I've worked as a senior engineer, lead, manager,
+            practice lead, CTO, and consultant.
+          </p>
+          <p>
+            Every wave — web 2.0, mobile, cloud, blockchain, AI — I've shipped real
+            software through. I'm not selling certainty. I'm offering the judgment
+            you get from watching what works, what doesn't, and what almost worked
+            but for one bad decision.
+          </p>
+          <p>
+            I work best with people who want a peer in the room — not a vendor, not a
+            deck. Direct, opinionated, and useful from the first call.
+          </p>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1 lg:col-span-7">
+        <p class="label mb-6 text-ink-faint">A rough timeline</p>
+        <ol class="relative space-y-1">
+          {
+            milestones.map((m) => (
+              <li class="grid grid-cols-12 gap-4 border-t border-rule py-4">
+                <span class="label col-span-3 text-accent sm:col-span-2">{m.year}</span>
+                <span class="col-span-9 text-ink-soft sm:col-span-10">{m.text}</span>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,82 @@
+---
+const engagements = [
+  {
+    n: '01',
+    title: 'Advisory & 1:1 work',
+    blurb:
+      "By the hour or by the week. Architecture reviews, tough technical decisions, hiring help, AI strategy that isn't hype. I work directly with founders and individual leaders who want a sharp second opinion.",
+    fit: 'Founders, indie operators, individual engineering leaders',
+  },
+  {
+    n: '02',
+    title: 'Fractional / embedded',
+    blurb:
+      "I slot into your team as a senior technologist — fractional CTO, principal engineer, or a hands-on lead. Sprint planning, code review, hard architecture calls, mentoring your team. I leave you stronger than I found you.",
+    fit: 'Startups Seed–Series B, scale-ups, established companies adding muscle',
+  },
+  {
+    n: '03',
+    title: 'Hands-on building',
+    blurb:
+      "When you need someone to actually ship it. Greenfield products, integrations, AI features, migrations from legacy systems. I write code, ship features, and stand up the infrastructure to run them.",
+    fit: 'Teams with a deadline and not enough senior firepower',
+  },
+  {
+    n: '04',
+    title: 'Technical due diligence',
+    blurb:
+      "Looking at an acquisition, an investment, or a partnership? I'll read the code, talk to the team, and tell you what's really there — risk, debt, fitness for purpose. No corporate hedging.",
+    fit: 'Investors, acquirers, boards',
+  },
+];
+---
+
+<section id="work" class="section-rule">
+  <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <div class="reveal mb-16 grid gap-8 md:grid-cols-12">
+      <div class="md:col-span-3">
+        <p class="label text-accent">01 — How I work</p>
+      </div>
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl text-ink md:text-6xl">
+          Four ways to <em>hire me</em>.
+        </h2>
+        <p class="mt-6 max-w-2xl text-lg text-ink-soft">
+          I'm one person. I take on a small number of engagements at a time so the
+          ones I do take get my full attention. Pick the shape that fits, or we'll
+          figure out the right one on a call.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid gap-px bg-rule md:grid-cols-2">
+      {
+        engagements.map((e, i) => (
+          <article class:list={[
+            'reveal',
+            i === 1 && 'reveal-delay-1',
+            i === 2 && 'reveal-delay-2',
+            i === 3 && 'reveal-delay-3',
+            'group bg-paper p-8 transition-colors hover:bg-paper-warm md:p-10',
+          ]}>
+            <div class="mb-6 flex items-baseline justify-between">
+              <span class="font-serif text-5xl text-accent">{e.n}</span>
+              <span class="label text-ink-faint">{e.fit}</span>
+            </div>
+            <h3 class="font-serif text-3xl text-ink md:text-4xl">{e.title}</h3>
+            <p class="mt-4 leading-relaxed text-ink-soft">{e.blurb}</p>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="reveal mt-12 flex flex-wrap items-center gap-6 border-l-2 border-accent bg-paper-warm/60 px-6 py-5">
+      <p class="font-serif text-2xl text-ink md:text-3xl">
+        Not sure which one? <em class="text-accent">Email me anyway.</em>
+      </p>
+      <a href="#contact" class="label text-ink underline decoration-2 underline-offset-4 hover:text-accent">
+        eric@polerecky.com →
+      </a>
+    </div>
+  </div>
+</section>

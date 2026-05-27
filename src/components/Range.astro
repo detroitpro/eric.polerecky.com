@@ -1,0 +1,86 @@
+---
+const stacks = [
+  { group: 'Cloud', items: ['AWS', 'Azure', 'GCP', 'Vercel', 'Cloudflare'] },
+  { group: 'Backend', items: ['.NET', 'Node', 'Go', 'Python', 'Postgres', 'Redis', 'Kafka'] },
+  { group: 'Web', items: ['React', 'Next.js', 'Astro', 'TypeScript', 'Vue'] },
+  { group: 'Mobile', items: ['Swift / iOS', 'Kotlin / Android', 'React Native', 'Flutter'] },
+  { group: 'Architecture', items: ['Monoliths', 'Microservices', 'Event-driven', 'Serverless', 'Hybrid'] },
+  { group: 'AI', items: ['LLM apps', 'RAG', 'Agents', 'Evals', 'Integration into existing products'] },
+];
+
+const contexts = [
+  {
+    label: 'Startups',
+    body: "From pre-seed prototypes to Series B scale. I've co-founded, joined as early CTO, and consulted to founders trying to find product-market fit without burning the runway.",
+  },
+  {
+    label: 'Enterprise',
+    body: "Fortune-500 platforms, large-scale .NET and cloud-native systems, marketing tech at retail scale. The kind of work where one decision affects thousands of people.",
+  },
+  {
+    label: 'Government',
+    body: "Public-sector engineering with the constraints that come with it — compliance, procurement, legacy systems, and the people who depend on the software actually working.",
+  },
+  {
+    label: 'Emerging tech',
+    body: "Spent serious time building in the early blockchain era, and now AI integration done seriously — not the demo-on-a-deck kind. Helping teams adopt new tech without setting their roadmap on fire.",
+  },
+];
+---
+
+<section id="range" class="section-rule bg-paper-warm/40">
+  <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <div class="reveal mb-16 grid gap-8 md:grid-cols-12">
+      <div class="md:col-span-3">
+        <p class="label text-accent">02 — Range</p>
+      </div>
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl text-ink md:text-6xl">
+          <em>Monoliths</em> to microservices.<br />
+          Startups to government.
+        </h2>
+        <p class="mt-6 max-w-2xl text-lg text-ink-soft">
+          The depth comes from years. The breadth comes from doing this in a lot of
+          rooms — and being willing to use whatever tool actually fits the problem.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="reveal lg:col-span-7">
+        <p class="label mb-6 text-ink-faint">Tools I reach for</p>
+        <div class="space-y-5">
+          {
+            stacks.map((s) => (
+              <div class="grid grid-cols-12 items-baseline gap-4 border-t border-rule pt-5">
+                <p class="col-span-12 font-serif text-2xl text-ink sm:col-span-3">{s.group}</p>
+                <div class="col-span-12 flex flex-wrap gap-x-3 gap-y-2 sm:col-span-9">
+                  {s.items.map((item, idx) => (
+                    <>
+                      <span class="text-ink-soft">{item}</span>
+                      {idx < s.items.length - 1 && <span class="text-ink-faint">·</span>}
+                    </>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1 lg:col-span-5">
+        <p class="label mb-6 text-ink-faint">Where I've done the work</p>
+        <ul class="space-y-6">
+          {
+            contexts.map((c) => (
+              <li class="notch pl-5">
+                <p class="font-serif text-2xl text-ink">{c.label}</p>
+                <p class="mt-2 leading-relaxed text-ink-soft">{c.body}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

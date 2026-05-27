@@ -1,0 +1,97 @@
+<section class="relative overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 pb-20 pt-20 md:pb-28 md:pt-28">
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="reveal mb-8 flex items-center gap-3">
+          <span class="label text-accent">Hello —</span>
+          <span class="h-px w-12 bg-rule"></span>
+          <span class="label text-ink-faint">Independent consultant, est. 1999</span>
+        </div>
+
+        <h1 class="reveal reveal-delay-1 display text-[clamp(2.75rem,8vw,6.5rem)] text-ink">
+          I help you take the&nbsp;hard problem<br />
+          and turn it into <em>shipped&nbsp;software</em>.
+        </h1>
+
+        <p class="reveal reveal-delay-2 mt-10 max-w-2xl text-lg leading-relaxed text-ink-soft md:text-xl">
+          I'm Eric Polerecky — a working software consultant, not an agency. I've been
+          building platforms since before Y2K. Founders, enterprises, and government
+          teams hire me when they need someone who can actually do the work, make
+          the call, and stay until it's done.
+        </p>
+
+        <div class="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href="#contact"
+            class="group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3.5 text-paper transition-all hover:bg-accent"
+          >
+            <span class="font-medium">Let's talk</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a
+            href="#work"
+            class="label inline-flex items-center gap-2 px-2 py-2 text-ink-soft underline decoration-rule decoration-2 underline-offset-8 transition-colors hover:text-accent hover:decoration-accent"
+          >
+            How engagements work
+          </a>
+        </div>
+      </div>
+
+      <aside class="reveal reveal-delay-4 lg:col-span-4 lg:pt-6">
+        <figure class="relative mb-8 max-w-xs rotate-[-1.5deg]">
+          <div class="absolute inset-0 translate-x-2 translate-y-2 bg-accent"></div>
+          <img
+            src="/images/avatar-github.png"
+            alt="Eric Polerecky"
+            width="460"
+            height="460"
+            loading="eager"
+            decoding="async"
+            class="relative block w-full border border-ink bg-paper grayscale-[15%]"
+          />
+          <figcaption class="label absolute -bottom-3 right-3 bg-ink px-2 py-1 text-paper">
+            That's me
+          </figcaption>
+        </figure>
+        <div class="space-y-5 border-l border-rule pl-6">
+          <div>
+            <p class="label mb-2 text-ink-faint">Status</p>
+            <p class="text-ink-soft">Open to new engagements as an independent consultant.</p>
+          </div>
+          <div>
+            <p class="label mb-2 text-ink-faint">Based</p>
+            <p class="text-ink-soft">Michigan, USA — working with teams worldwide.</p>
+          </div>
+          <div>
+            <p class="label mb-2 text-ink-faint">Best for</p>
+            <p class="text-ink-soft">Teams that value judgment over slideware and want a builder in the room.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="section-rule relative overflow-hidden bg-paper-warm py-5">
+    <div class="marquee-track flex w-max items-center gap-12 whitespace-nowrap">
+      {
+        Array.from({ length: 2 }).map(() => (
+          <div class="flex items-center gap-12">
+            {[
+              'AWS', 'Azure', 'GCP', 'Vercel', 'React', 'Next.js', '.NET', 'Node',
+              'iOS / Swift', 'Android / Kotlin', 'React Native', 'Postgres',
+              'Kubernetes', 'Terraform', 'Monoliths', 'Microservices', 'Event-driven',
+              'AI / LLMs', 'TypeScript', 'Go', 'Python',
+            ].map((item) => (
+              <span class="label flex items-center gap-12 text-ink-soft">
+                {item}
+                <span class="text-accent">//</span>
+              </span>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+---
+const socialLinks = [
+  { name: 'LinkedIn', handle: 'in/ericpolerecky', href: 'https://www.linkedin.com/in/ericpolerecky/' },
+  { name: 'GitHub', handle: '@detroitpro', href: 'https://github.com/detroitpro' },
+  { name: 'X / Twitter', handle: '@detroitpro', href: 'https://x.com/detroitpro' },
+  { name: 'Bluesky', handle: '@detroitpro.bsky.social', href: 'https://bsky.app/profile/detroitpro.bsky.social' },
+];
+
+const email = 'eric@polerecky.com';
+---
+
+<section id="contact" class="section-rule bg-ink text-paper">
+  <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="reveal lg:col-span-7">
+        <p class="label mb-4 text-accent-soft">04 — Contact</p>
+        <h2 class="display text-5xl text-paper md:text-7xl">
+          Tell me what<br />you're <em>working on</em>.
+        </h2>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-paper/75">
+          The best engagements start with a real conversation. Send me a few
+          sentences about what you're trying to build, where you're stuck, or what
+          decision you're trying to make. I read everything personally.
+        </p>
+
+        <a
+          href={`mailto:${email}?subject=Consulting%20inquiry`}
+          class="group mt-10 inline-flex items-baseline gap-3 border-b-2 border-paper/40 pb-2 font-serif text-3xl text-paper transition-colors hover:border-accent hover:text-accent md:text-5xl"
+        >
+          {email}
+          <span class="text-2xl transition-transform group-hover:translate-x-1 md:text-3xl">→</span>
+        </a>
+      </div>
+
+      <aside class="reveal reveal-delay-1 lg:col-span-5">
+        <p class="label mb-6 text-paper/60">Elsewhere</p>
+        <ul class="space-y-px bg-paper/10">
+          {
+            socialLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex items-center justify-between bg-ink px-5 py-4 transition-colors hover:bg-paper hover:text-ink"
+                >
+                  <span class="font-serif text-xl">{link.name}</span>
+                  <span class="label flex items-center gap-2 text-paper/60 group-hover:text-ink/70">
+                    {link.handle}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+
+        <div class="mt-8 border-t border-paper/20 pt-6">
+          <p class="label mb-2 text-paper/60">Response time</p>
+          <p class="text-paper/85">Usually within a day. Always personally.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
