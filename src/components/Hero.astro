@@ -1,3 +1,7 @@
+---
+import { resumeUrl } from '../site';
+---
+
 <section class="relative overflow-hidden">
   <div class="mx-auto max-w-7xl px-6 pb-20 pt-20 md:pb-28 md:pt-28">
     <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
@@ -28,6 +32,17 @@
             <span class="font-medium">Let's talk</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1" aria-hidden="true">
               <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center gap-3 rounded-full border-2 border-ink px-6 py-3.5 font-medium text-ink transition-all hover:bg-ink hover:text-paper"
+          >
+            <span>Download résumé</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-y-0.5" aria-hidden="true">
+              <path d="M12 3v12M8 11l4 4 4-4M5 21h14" />
             </svg>
           </a>
           <a
@@ -79,10 +94,10 @@
         Array.from({ length: 2 }).map(() => (
           <div class="flex items-center gap-12">
             {[
-              'AWS', 'Azure', 'GCP', 'Vercel', 'React', 'Next.js', '.NET', 'Node',
-              'iOS / Swift', 'Android / Kotlin', 'React Native', 'Postgres',
-              'Kubernetes', 'Terraform', 'Monoliths', 'Microservices', 'Event-driven',
-              'AI / LLMs', 'TypeScript', 'Go', 'Python',
+              'Azure', 'AWS', '.NET', 'Node', 'Angular', 'React', 'Vue',
+              'TypeScript', 'React Native', 'Python', 'SQL Server', 'Docker',
+              'Kubernetes', 'Terraform', 'Microservices', 'Event-driven',
+              'AI / LLMs', 'Blazor', 'Redis',
             ].map((item) => (
               <span class="label flex items-center gap-12 text-ink-soft">
                 {item}

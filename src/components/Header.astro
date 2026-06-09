@@ -1,4 +1,6 @@
 ---
+import { resumeUrl } from '../site';
+
 const navLinks = [
   { href: '#work', label: '01 / How I work' },
   { href: '#range', label: '02 / Range' },
@@ -25,6 +27,15 @@ const navLinks = [
         ))
       }
     </nav>
+    <div class="flex items-center gap-3">
+    <a
+      href={resumeUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="label hidden text-ink-soft transition-colors hover:text-accent sm:inline"
+    >
+      Résumé
+    </a>
     <a
       href="#contact"
       class="group flex items-center gap-2 rounded-full border border-ink bg-ink px-4 py-2 text-paper transition-all hover:bg-paper hover:text-ink"
@@ -35,5 +46,6 @@ const navLinks = [
       </span>
       <span class="label">Available</span>
     </a>
+    </div>
   </div>
 </header>
